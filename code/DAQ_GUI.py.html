@@ -1,0 +1,1468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>C:\Users\David\Documents\CAMBRIDGE\YEAR3\Y3_Summerwork\CODE\(9)\DAQ_GUI.py</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+	<meta name="date" content="2013-09-09T23:47:22" />
+	<style type="text/css">
+	body
+	{
+		font-family: DejaVu Sans Mono, monospace;
+		font-size: 10pt;
+	}
+	.style_0
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_1
+	{
+		color: #d00000;
+		background-color: #ffffff;
+	}
+	.style_2
+	{
+		color: #007f00;
+		background-color: #ffffff;
+	}
+	.style_3
+	{
+		color: #ff8000;
+		background-color: #ffffff;
+	}
+	.style_4
+	{
+		color: #ff8000;
+		background-color: #ffffff;
+	}
+	.style_5
+	{
+		color: #00007f;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_8
+	{
+		color: #0000d0;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_9
+	{
+		color: #000080;
+		background-color: #ffffff;
+	}
+	.style_10
+	{
+		color: #301010;
+		background-color: #ffffff;
+	}
+	.style_11
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_14
+	{
+		color: #991111;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_33
+	{
+		color: #000000;
+		background-color: #508b6d0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_34
+	{
+		color: #7b0850;
+		background-color: #63a4603b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_35
+	{
+		color: #6a186a0;
+		background-color: #77ab2cc9;
+		font-weight: bold;
+	}
+	.style_36
+	{
+		color: #000000;
+		background-color: #000060;
+		font-style: italic;
+	}
+	.style_37
+	{
+		color: #000000;
+		background-color: #65c419f0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_38
+	{
+		color: #28db98;
+		background-color: #65c41a03;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_39
+	{
+		color: #65c417d7;
+		background-color: #77aae38c;
+		font-weight: bold;
+	}
+	.style_40
+	{
+		color: #6a0000;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_41
+	{
+		color: #000068;
+		background-color: #28dbd8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_42
+	{
+		color: #20238729;
+		background-color: #7659adf9;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_43
+	{
+		color: #000060;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_44
+	{
+		color: #7b0188;
+		background-color: #6a186a0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_45
+	{
+		color: #000060;
+		background-color: #28dcbc;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_47
+	{
+		color: #68608432;
+		background-color: #000008;
+		font-style: italic;
+	}
+	.style_48
+	{
+		color: #000000;
+		background-color: #5125ce0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_49
+	{
+		color: #52ca0c0;
+		background-color: #28dc78;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_50
+	{
+		color: #28dc88;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_51
+	{
+		color: #000002;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_52
+	{
+		color: #7659ade8;
+		background-color: #6a0000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_53
+	{
+		color: #81a9b0;
+		background-color: #6861ab60;
+		font-weight: bold;
+	}
+	.style_59
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_60
+	{
+		color: #000002;
+		background-color: #4cbead0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_61
+	{
+		color: #5103cc4;
+		background-color: #28dd68;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_62
+	{
+		color: #28dd88;
+		background-color: #4cbead0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_63
+	{
+		color: #68dda44e;
+		background-color: #5103cc4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_64
+	{
+		color: #4d18610;
+		background-color: #52df8e8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_65
+	{
+		color: #000000;
+		background-color: #28de08;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_66
+	{
+		color: #28ddc8;
+		background-color: #68dcc9e8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_67
+	{
+		color: #68dc5849;
+		background-color: #52df758;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_68
+	{
+		color: #52df774;
+		background-color: #52df8e8;
+	}
+	.style_69
+	{
+		color: #000000;
+		background-color: #28e668;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_70
+	{
+		color: #000005;
+		background-color: #7b0198;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_71
+	{
+		color: #28dda0;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_73
+	{
+		color: #408d2800;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_74
+	{
+		color: #000005;
+		background-color: #006c00;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_75
+	{
+		color: #000020;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_77
+	{
+		color: #40340000;
+		background-color: #00001d;
+		font-weight: bold;
+	}
+	.style_79
+	{
+		color: #408dc000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_80
+	{
+		color: #000000;
+		background-color: #408e0000;
+		font-style: italic;
+	}
+	.style_81
+	{
+		color: #000100;
+		background-color: #03a200;
+		font-weight: bold;
+	}
+	.style_82
+	{
+		color: #28e288;
+		background-color: #68dd402c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_83
+	{
+		color: #52b7d38;
+		background-color: #000010;
+		font-weight: bold;
+	}
+	.style_84
+	{
+		color: #000008;
+		background-color: #77aae38c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_85
+	{
+		color: #3fb99999;
+		background-color: #28df40;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_89
+	{
+		color: #000000;
+		background-color: #28df98;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_90
+	{
+		color: #52cfd50;
+		background-color: #261670;
+		font-style: italic;
+	}
+	.style_91
+	{
+		color: #68607663;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_94
+	{
+		color: #28e018;
+		background-color: #655900ec;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_95
+	{
+		color: #000000;
+		background-color: #525d600;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_96
+	{
+		color: #8329c0;
+		background-color: #51417b0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_97
+	{
+		color: #7fbd10;
+		background-color: #28e038;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_98
+	{
+		color: #28e048;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_99
+	{
+		color: #50e5930;
+		background-color: #65c41a10;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_100
+	{
+		color: #000025;
+		background-color: #3aa000f;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_101
+	{
+		color: #000008;
+		background-color: #28e0c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_102
+	{
+		color: #28e0d8;
+		background-color: #68607b2e;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_103
+	{
+		color: #7d8c20;
+		background-color: #000005;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_104
+	{
+		color: #7cdd50;
+		background-color: #000008;
+		font-style: italic;
+	}
+	.style_105
+	{
+		color: #52cd9e8;
+		background-color: #52cd9e8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_106
+	{
+		color: #28e0e8;
+		background-color: #6558ae07;
+		font-style: italic;
+	}
+	.style_107
+	{
+		color: #63a46959;
+		background-color: #8329c0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_108
+	{
+		color: #000025;
+		background-color: #52cdaa4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_109
+	{
+		color: #000030;
+		background-color: #28e128;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_110
+	{
+		color: #6a18700;
+		background-color: #28e168;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_111
+	{
+		color: #65c417d7;
+		background-color: #000025;
+		font-weight: bold;
+	}
+	.style_112
+	{
+		color: #7cdd78;
+		background-color: #000010;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_113
+	{
+		color: #6a0000;
+		background-color: #28ffc4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_115
+	{
+		color: #000007;
+		background-color: #7cdd58;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_117
+	{
+		color: #4baf6e0;
+		background-color: #28e1c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_118
+	{
+		color: #65c419f0;
+		background-color: #000012;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_119
+	{
+		color: #65c41a03;
+		background-color: #7e4b48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_120
+	{
+		color: #7e4b48;
+		background-color: #803f30;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_121
+	{
+		color: #000000;
+		background-color: #28e218;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_122
+	{
+		color: #28ffc4;
+		background-color: #28e27c;
+		font-weight: bold;
+	}
+	.style_123
+	{
+		color: #6558bbfa;
+		background-color: #7e52f8;
+	}
+	.style_124
+	{
+		color: #000000;
+		background-color: #28e27c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_126
+	{
+		color: #000000;
+		background-color: #010000;
+		font-style: italic;
+	}
+	.style_128
+	{
+		color: #000000;
+		background-color: #28e42c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_129
+	{
+		color: #28e42c;
+		background-color: #9999999a;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_131
+	{
+		color: #5261cb0;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_132
+	{
+		color: #000000;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_133
+	{
+		color: #520c0a8;
+		background-color: #520c0ad;
+		font-style: italic;
+	}
+	.style_134
+	{
+		color: #7bd3b8;
+		background-color: #77aae38c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_135
+	{
+		color: #51d3950;
+		background-color: #7b0048;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_136
+	{
+		color: #f61d851f;
+		background-color: #28e2b8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_138
+	{
+		color: #000040;
+		background-color: #77aae046;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_139
+	{
+		color: #77aae38c;
+		background-color: #768ace22;
+		font-style: italic;
+	}
+	.style_140
+	{
+		color: #000000;
+		background-color: #28ffc4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_141
+	{
+		color: #77aae38c;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_142
+	{
+		color: #000001;
+		background-color: #000020;
+		font-style: italic;
+	}
+	.style_144
+	{
+		color: #03a200;
+		background-color: #000100;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_145
+	{
+		color: #000001;
+		background-color: #28e3dc;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_147
+	{
+		color: #6a01c4;
+		background-color: #6a0000;
+		font-weight: bold;
+	}
+	.style_148
+	{
+		color: #0002bb;
+		background-color: #001c00;
+		font-style: italic;
+	}
+	.style_149
+	{
+		color: #22000c;
+		background-color: #0002bb;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_150
+	{
+		color: #00001b;
+		background-color: #77aae38c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_151
+	{
+		color: #6a0000;
+		background-color: #7b0174;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_152
+	{
+		color: #28e3f4;
+		background-color: #52df8e8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_153
+	{
+		color: #0016af;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_154
+	{
+		color: #000010;
+		background-color: #9999999a;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_155
+	{
+		color: #7b0160;
+		background-color: #5078320;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_156
+	{
+		color: #52df778;
+		background-color: #28ffc4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_157
+	{
+		color: #77aae38c;
+		background-color: #77aae0f2;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_158
+	{
+		color: #000000;
+		background-color: #000002;
+		font-style: italic;
+	}
+	.style_159
+	{
+		color: #28e52c;
+		background-color: #7659ade8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_161
+	{
+		color: #28e500;
+		background-color: #28e538;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_162
+	{
+		color: #000002;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_163
+	{
+		color: #000000;
+		background-color: #65c41a10;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_164
+	{
+		color: #8185d8;
+		background-color: #65c419f0;
+		font-weight: bold;
+	}
+	.style_165
+	{
+		color: #7e48d0;
+		background-color: #28e588;
+		font-weight: bold;
+	}
+	.style_166
+	{
+		color: #5160418;
+		background-color: #0000c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_167
+	{
+		color: #65c417d7;
+		background-color: #000025;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_168
+	{
+		color: #5160410;
+		background-color: #00001c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_169
+	{
+		color: #525c0c0;
+		background-color: #5160410;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_171
+	{
+		color: #00000c;
+		background-color: #7cdd68;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_173
+	{
+		color: #6ad9e0;
+		background-color: #28e628;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_174
+	{
+		color: #28e638;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_175
+	{
+		color: #6c35aaab;
+		background-color: #525c0c0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_176
+	{
+		color: #000001;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_177
+	{
+		color: #4f79b68;
+		background-color: #03a500;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_178
+	{
+		color: #28e698;
+		background-color: #00000d;
+		font-weight: bold;
+	}
+	.style_179
+	{
+		color: #000020;
+		background-color: #52df8ec;
+		font-style: italic;
+	}
+	.style_180
+	{
+		color: #7e4b48;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_181
+	{
+		color: #6a0000;
+		background-color: #28e6c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_182
+	{
+		color: #28e6d8;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_183
+	{
+		color: #65c417d7;
+		background-color: #000025;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_184
+	{
+		color: #000001;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_186
+	{
+		color: #65c419f0;
+		background-color: #68606c01;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_187
+	{
+		color: #65c41a03;
+		background-color: #7e4b48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_188
+	{
+		color: #000025;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_189
+	{
+		color: #000001;
+		background-color: #28e798;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_190
+	{
+		color: #28e778;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_191
+	{
+		color: #000010;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_192
+	{
+		color: #000001;
+		background-color: #65c419f0;
+		font-weight: bold;
+	}
+	.style_194
+	{
+		color: #525d840;
+		background-color: #68607153;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_195
+	{
+		color: #525d600;
+		background-color: #6868f668;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_196
+	{
+		color: #000008;
+		background-color: #52deda0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_197
+	{
+		color: #4b99848;
+		background-color: #28e828;
+		font-weight: bold;
+	}
+	.style_198
+	{
+		color: #5178db0;
+		background-color: #4b99848;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_199
+	{
+		color: #65c41a23;
+		background-color: #7e4da8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_200
+	{
+		color: #000001;
+		background-color: #4b99848;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_201
+	{
+		color: #4ba3eb0;
+		background-color: #52deda0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_202
+	{
+		color: #28e868;
+		background-color: #65c417d7;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_203
+	{
+		color: #000016;
+		background-color: #7cdd58;
+		font-style: italic;
+	}
+	.style_204
+	{
+		color: #768ac532;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_205
+	{
+		color: #000010;
+		background-color: #02000d;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_207
+	{
+		color: #a0009e;
+		background-color: #28e990;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_208
+	{
+		color: #77aba67f;
+		background-color: #768ac49a;
+		font-style: italic;
+	}
+	.style_209
+	{
+		color: #906478;
+		background-color: #000008;
+		font-style: italic;
+	}
+	.style_211
+	{
+		color: #00009e;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_213
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_214
+	{
+		color: #28e968;
+		background-color: #63a74140;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_215
+	{
+		color: #28ffc4;
+		background-color: #77af71f5;
+	}
+	.style_216
+	{
+		color: #77aba85f;
+		background-color: #9a5330;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_217
+	{
+		color: #77aba8e4;
+		background-color: #000008;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_218
+	{
+		color: #000000;
+		background-color: #77aae38c;
+		font-weight: bold;
+	}
+	.style_219
+	{
+		color: #77aae38c;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_220
+	{
+		color: #0a0008;
+		background-color: #77aba8e4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_221
+	{
+		color: #55005c;
+		background-color: #650073;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_222
+	{
+		color: #640069;
+		background-color: #44005c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_223
+	{
+		color: #730074;
+		background-color: #43005c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_224
+	{
+		color: #450047;
+		background-color: #59005c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_225
+	{
+		color: #5f0033;
+		background-color: #750053;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_226
+	{
+		color: #6b0072;
+		background-color: #43005c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_227
+	{
+		color: #5c0029;
+		background-color: #410044;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_246
+	{
+		color: #000000;
+		background-color: #000000;
+	}
+	.style_247
+	{
+		color: #000000;
+		background-color: #9a5328;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_248
+	{
+		color: #000000;
+		background-color: #6a0000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_249
+	{
+		color: #ffff0000;
+		background-color: #00bcd9;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_250
+	{
+		color: #4ca2898;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_251
+	{
+		color: #4ca4788;
+		background-color: #6aaae28;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_252
+	{
+		color: #765998cd;
+		background-color: #6a0000;
+		font-style: italic;
+	}
+	.style_253
+	{
+		color: #6aaae28;
+		background-color: #000010;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_254
+	{
+		color: #000018;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_255
+	{
+		color: #765b8cd5;
+		background-color: #f61d851f;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	</style>
+</head>
+
+<body>
+<p>
+<span class="style_1">#!/usr/bin/env&nbsp;python</span><br />
+<br />
+<span class="style_5">import&nbsp;</span><span class="style_11">pylab</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">Tkinter</span><br />
+<span class="style_5">from&nbsp;</span><span class="style_11">matplotlib</span><span class="style_10">.</span><span class="style_11">backends</span><span class="style_10">.</span><span class="style_11">backend_tkagg&nbsp;</span><span class="style_5">import&nbsp;</span><span class="style_11">FigureCanvasTkAgg</span><span class="style_10">,&nbsp;</span><span class="style_11">NavigationToolbar2TkAgg</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">tkMessageBox</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">time</span><br />
+<span class="style_5">from&nbsp;</span><span class="style_11">Adafruit_ADS1x15&nbsp;</span><span class="style_5">import&nbsp;</span><span class="style_11">ADS1x15</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">numpy&nbsp;</span><span class="style_5">as&nbsp;</span><span class="style_11">np</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">threading</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">Queue</span><br />
+<br />
+<span class="style_5">class&nbsp;</span><span class="style_8">realtimeplot</span><span class="style_10">(</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Tk</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">__init__</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">,</span><span class="style_11">parent</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Tk</span><span class="style_10">.</span><span class="style_11">__init__</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">,</span><span class="style_11">parent</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">parent&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">parent</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">initialize</span><span class="style_10">()</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">initialize</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;Tkinter&nbsp;interface</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;This&nbsp;is&nbsp;a&nbsp;flag&nbsp;used&nbsp;to&nbsp;determine&nbsp;if&nbsp;we&nbsp;are&nbsp;sampling&nbsp;or&nbsp;not</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">period&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Default&nbsp;sampling&nbsp;period&nbsp;to&nbsp;1&nbsp;second</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">np</span><span class="style_10">.</span><span class="style_11">zeros</span><span class="style_10">(</span><span class="style_11">shape</span><span class="style_10">=(</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_2">2</span><span class="style_10">))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Array&nbsp;to&nbsp;store&nbsp;data&nbsp;in</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">data_queue&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Queue</span><span class="style_10">.</span><span class="style_11">Queue</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Queue&nbsp;to&nbsp;share&nbsp;data&nbsp;between&nbsp;the&nbsp;two&nbsp;threads</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fig&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">pylab</span><span class="style_10">.</span><span class="style_11">figure</span><span class="style_10">(</span><span class="style_2">1</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;pylab&nbsp;plot</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fig</span><span class="style_10">.</span><span class="style_11">add_subplot</span><span class="style_10">(</span><span class="style_2">111</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">grid</span><span class="style_10">(</span><span class="style_5">True</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">set_title</span><span class="style_10">(</span><span class="style_3">"Voltage&nbsp;Plot"</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">set_xlabel</span><span class="style_10">(</span><span class="style_3">"Time&nbsp;(seconds)"</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">set_ylabel</span><span class="style_10">(</span><span class="style_3">"Voltage&nbsp;(mV)"</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">axis</span><span class="style_10">([</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_2">100</span><span class="style_10">,</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_2">3500</span><span class="style_10">])</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">line1</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">plot</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_4">'r-'</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">canvas&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">FigureCanvasTkAgg</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fig</span><span class="style_10">,&nbsp;</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;canvas&nbsp;to&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">canvas</span><span class="style_10">.</span><span class="style_11">show</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;embed&nbsp;pylab&nbsp;plot&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">canvas</span><span class="style_10">.</span><span class="style_11">_tkcanvas</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">TOP</span><span class="style_10">,&nbsp;</span><span class="style_11">fill</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTH</span><span class="style_10">,&nbsp;</span><span class="style_11">expand</span><span class="style_10">=</span><span class="style_2">1</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;in&nbsp;Tkinter</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">quit_button&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Button</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width</span><span class="style_10">=</span><span class="style_2">30</span><span class="style_10">,&nbsp;</span><span class="style_11">height</span><span class="style_10">=</span><span class="style_2">1</span><span class="style_10">,</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">10</span><span class="style_10">),</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Quit'</span><span class="style_10">,&nbsp;</span><span class="style_11">bg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">command</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">_quit</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Quit&nbsp;GUI&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">quit_button</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">stop_button&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Button</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width</span><span class="style_10">=</span><span class="style_2">30</span><span class="style_10">,&nbsp;</span><span class="style_11">height&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">10</span><span class="style_10">),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Stop&nbsp;sampling&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Stop&nbsp;Sampling&nbsp;and&nbsp;Save&nbsp;Data&nbsp;to&nbsp;File'</span><span class="style_10">,&nbsp;</span><span class="style_11">fg</span><span class="style_10">=</span><span class="style_4">'black'</span><span class="style_10">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">bg</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">command&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">stop_pressed</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">stop_button</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fileName&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">StringVar</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Entry&nbsp;box&nbsp;for&nbsp;user</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Entry</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">20</span><span class="style_10">,&nbsp;</span><span class="style_11">textvariable&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fileName</span><span class="style_10">).</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)&nbsp;&nbsp;</span><span class="style_1">#&nbsp;to&nbsp;input&nbsp;desired&nbsp;file</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;name&nbsp;which&nbsp;is&nbsp;stored&nbsp;in</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">fileNameLabel&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">bg&nbsp;</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;variable&nbsp;fileName</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Enter&nbsp;File&nbsp;Name'</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">fileNameLabel</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">start_button&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Button</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">30</span><span class="style_10">,&nbsp;</span><span class="style_11">height&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">10</span><span class="style_10">),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Start&nbsp;sampling&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Start&nbsp;Sampling'</span><span class="style_10">,&nbsp;</span><span class="style_11">fg</span><span class="style_10">=</span><span class="style_4">'black'</span><span class="style_10">,&nbsp;</span><span class="style_11">bg</span><span class="style_10">=</span><span class="style_3">"light&nbsp;grey"</span><span class="style_10">,&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">command&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">start_pressed</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">start_button</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">numSamples&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Scale</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,</span><span class="style_11">label</span><span class="style_10">=</span><span class="style_3">"Number&nbsp;of&nbsp;samples&nbsp;to&nbsp;display&nbsp;in&nbsp;plot:&nbsp;"</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;slider&nbsp;to</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">bg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">from_</span><span class="style_10">=</span><span class="style_2">10</span><span class="style_10">,&nbsp;</span><span class="style_11">to</span><span class="style_10">=</span><span class="style_2">3600</span><span class="style_10">,</span><span class="style_11">sliderlength</span><span class="style_10">=</span><span class="style_2">60</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;set&nbsp;number&nbsp;of&nbsp;samples</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">length</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">get_frame</span><span class="style_10">().</span><span class="style_11">get_window_extent</span><span class="style_10">().</span><span class="style_11">width</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;to&nbsp;show&nbsp;in&nbsp;plot</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">orient</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">HORIZONTAL</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">numSamples</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">numSamples</span><span class="style_10">.</span><span class="style_14">set</span><span class="style_10">(</span><span class="style_2">100</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">frequpdate&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Button</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">30</span><span class="style_10">,&nbsp;</span><span class="style_11">height&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">10</span><span class="style_10">),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Button&nbsp;to&nbsp;update&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Update&nbsp;Sampling&nbsp;Frequency'</span><span class="style_10">,&nbsp;</span><span class="style_11">fg</span><span class="style_10">=</span><span class="style_4">'black'</span><span class="style_10">,&nbsp;</span><span class="style_11">bg</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;sampling&nbsp;frequency</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">command&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">freq_pressed</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">frequpdate</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">freqget&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">StringVar</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;string&nbsp;to&nbsp;store</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Entry</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">width&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">20</span><span class="style_10">,&nbsp;</span><span class="style_11">textvariable&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">freqget</span><span class="style_10">).</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;frequency&nbsp;value&nbsp;from</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;user&nbsp;input</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">freqlabel&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label&nbsp;</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">bg&nbsp;</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;label&nbsp;above</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text</span><span class="style_10">=</span><span class="style_4">'Enter&nbsp;Sampling&nbsp;Frequency&nbsp;(Hz)&nbsp;-&nbsp;Max&nbsp;16Hz:'</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;frequency&nbsp;input</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">freqlabel</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">frequency_now&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">StringVar</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;string&nbsp;to&nbsp;store</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">current_freq_label&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">20</span><span class="style_10">),&nbsp;</span><span class="style_11">fg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'blue'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;current&nbsp;sample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">bg</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">wraplength&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">3000</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;frequency&nbsp;and&nbsp;label&nbsp;to</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">textvariable&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">frequency_now</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;display&nbsp;the&nbsp;frequency</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">current_freq_label</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">current_freq_title&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">10</span><span class="style_10">),&nbsp;</span><span class="style_11">fg</span><span class="style_10">=</span><span class="style_4">'black'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;title&nbsp;above&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">bg</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">wraplength&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1000</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;current&nbsp;sampling&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'Current&nbsp;Sampling&nbsp;Frequency&nbsp;(Hz)&nbsp;'</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;frequency&nbsp;label</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">current_freq_title</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample_value_string&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">StringVar</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;label&nbsp;to&nbsp;display</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sample_value&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">50</span><span class="style_10">),&nbsp;</span><span class="style_11">fg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'red'</span><span class="style_10">,&nbsp;</span><span class="style_11">bg</span><span class="style_10">=</span><span class="style_3">"light&nbsp;grey"</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;last&nbsp;adc&nbsp;conversion&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">wraplength&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">3000</span><span class="style_10">,&nbsp;</span><span class="style_11">textvariable&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample_value_string</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;result</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sample_value</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sample_value_label&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">Label</span><span class="style_10">(</span><span class="style_11">master</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">,&nbsp;</span><span class="style_11">font</span><span class="style_10">=(</span><span class="style_4">'Calibri'</span><span class="style_10">,&nbsp;</span><span class="style_2">15</span><span class="style_10">),&nbsp;</span><span class="style_11">fg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'black'</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;title&nbsp;above</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">bg</span><span class="style_10">=</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">,&nbsp;</span><span class="style_11">wraplength&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1000</span><span class="style_10">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;last&nbsp;conversion&nbsp;result</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">text&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'Voltage&nbsp;reading&nbsp;(mV)'</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;label</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sample_value_label</span><span class="style_10">.</span><span class="style_11">pack</span><span class="style_10">(</span><span class="style_11">side</span><span class="style_10">=</span><span class="style_11">Tkinter</span><span class="style_10">.</span><span class="style_11">BOTTOM</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">frequency_now</span><span class="style_10">.</span><span class="style_14">set</span><span class="style_10">(</span><span class="style_3">"1.0"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Set&nbsp;initial&nbsp;output&nbsp;of&nbsp;last&nbsp;adc&nbsp;sample&nbsp;to&nbsp;0,&nbsp;and&nbsp;current&nbsp;sapling&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample_value_string</span><span class="style_10">.</span><span class="style_14">set</span><span class="style_10">(</span><span class="style_3">"0"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;frequency&nbsp;to&nbsp;1Hz</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">_quit</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Function&nbsp;called&nbsp;by&nbsp;quit&nbsp;GUI&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_2">1</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">0</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_11">tkMessageBox</span><span class="style_10">.</span><span class="style_11">askokcancel</span><span class="style_10">(</span><span class="style_4">'Quit?'</span><span class="style_10">,&nbsp;</span><span class="style_4">'Are&nbsp;you&nbsp;sure&nbsp;you&nbsp;want&nbsp;to&nbsp;quit?'</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_14">quit</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">destroy</span><span class="style_10">()&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">start_pressed</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Function&nbsp;called&nbsp;by&nbsp;start&nbsp;sampling&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_2">0</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Begin&nbsp;adc&nbsp;conversions&nbsp;on&nbsp;pin&nbsp;A0,&nbsp;pga&nbsp;=&nbsp;4096,&nbsp;sps&nbsp;=16.&nbsp;If&nbsp;you&nbsp;want&nbsp;to&nbsp;use&nbsp;a&nbsp;different&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;input&nbsp;pin,&nbsp;input&nbsp;voltage&nbsp;range,&nbsp;or&nbsp;sampling&nbsp;rate&nbsp;higher&nbsp;then&nbsp;16Hz&nbsp;then&nbsp;change&nbsp;this&nbsp;line</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">adc</span><span class="style_10">.</span><span class="style_11">startContinuousConversion</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,&nbsp;</span><span class="style_2">4096</span><span class="style_10">,&nbsp;</span><span class="style_2">16</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;self.t_last&nbsp;represents&nbsp;the&nbsp;time&nbsp;of&nbsp;the&nbsp;last&nbsp;sample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">t_last</span><span class="style_10">=</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">StartTime&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">t_last</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Create&nbsp;thread&nbsp;samples&nbsp;ADC&nbsp;values&nbsp;and&nbsp;places&nbsp;them&nbsp;in&nbsp;self.data_queue,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;this&nbsp;queue&nbsp;is&nbsp;used&nbsp;to&nbsp;share&nbsp;the&nbsp;results&nbsp;between&nbsp;the&nbsp;sampling&nbsp;thread&nbsp;and</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;the&nbsp;Tkinter&nbsp;thread</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">thread1&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">threading</span><span class="style_10">.</span><span class="style_11">Thread</span><span class="style_10">(</span><span class="style_11">target</span><span class="style_10">=</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">SampleADC</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">thread1</span><span class="style_10">.</span><span class="style_11">start</span><span class="style_10">()</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">after</span><span class="style_10">(</span><span class="style_2">10000</span><span class="style_10">,&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">RealtimePloter</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">after</span><span class="style_10">(</span><span class="style_2">20</span><span class="style_10">,&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ProcessQueue</span><span class="style_10">)</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">stop_pressed</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Function&nbsp;called&nbsp;by&nbsp;stop&nbsp;sampling&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_2">1</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_11">tkMessageBox</span><span class="style_10">.</span><span class="style_11">askokcancel</span><span class="style_10">(</span><span class="style_4">'Stop&nbsp;Sampling?'</span><span class="style_10">,&nbsp;</span><span class="style_4">'Are&nbsp;you&nbsp;sure&nbsp;you&nbsp;want&nbsp;to&nbsp;Stop&nbsp;Sampling?&nbsp;'</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">0</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Find&nbsp;the&nbsp;string&nbsp;that&nbsp;the&nbsp;user&nbsp;has&nbsp;inputed&nbsp;into&nbsp;the&nbsp;"enter&nbsp;file&nbsp;name"&nbsp;input</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataFile&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">fileName</span><span class="style_10">.</span><span class="style_11">get</span><span class="style_10">()</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;If&nbsp;nothing&nbsp;has&nbsp;been&nbsp;input&nbsp;to&nbsp;this&nbsp;box,&nbsp;save&nbsp;the&nbsp;file&nbsp;as&nbsp;"dataFile.txt</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_10">(</span><span class="style_14">len</span><span class="style_10">(</span><span class="style_11">dataFile</span><span class="style_10">)&nbsp;==&nbsp;</span><span class="style_2">0</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataFile&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_3">"dataFile"</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Add&nbsp;the&nbsp;user&nbsp;input&nbsp;file&nbsp;name&nbsp;to&nbsp;the&nbsp;directory&nbsp;where&nbsp;we&nbsp;will&nbsp;save&nbsp;the&nbsp;file</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataFile</span><span class="style_10">=</span><span class="style_4">''</span><span class="style_10">.</span><span class="style_11">join</span><span class="style_10">([</span><span class="style_3">"/home/pi/Documents/"</span><span class="style_10">,</span><span class="style_11">dataFile</span><span class="style_10">,&nbsp;</span><span class="style_3">".txt"</span><span class="style_10">])</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Try&nbsp;to&nbsp;save&nbsp;the&nbsp;data&nbsp;to&nbsp;file</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">try</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">np</span><span class="style_10">.</span><span class="style_11">savetxt</span><span class="style_10">(</span><span class="style_11">dataFile</span><span class="style_10">,&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">,&nbsp;</span><span class="style_11">fmt</span><span class="style_10">=</span><span class="style_4">'%.1f'</span><span class="style_10">,&nbsp;</span><span class="style_11">delimiter</span><span class="style_10">=</span><span class="style_4">'&nbsp;,&nbsp;'</span><span class="style_10">)&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;If&nbsp;this&nbsp;fails&nbsp;save&nbsp;the&nbsp;file&nbsp;under&nbsp;a&nbsp;default&nbsp;name&nbsp;"DataFile.txt"&nbsp;so&nbsp;the&nbsp;data&nbsp;isn't&nbsp;lost!</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">except</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">np</span><span class="style_10">.</span><span class="style_11">savetxt</span><span class="style_10">(</span><span class="style_3">"/home/pi/Documents/BreadLab/breadDataFile.txt"</span><span class="style_10">,&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">,&nbsp;</span><span class="style_11">fmt</span><span class="style_10">=</span><span class="style_4">'%.1f'</span><span class="style_10">,&nbsp;</span><span class="style_11">delimiter</span><span class="style_10">=</span><span class="style_4">'&nbsp;,&nbsp;'</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">freq_pressed</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Function&nbsp;called&nbsp;by&nbsp;update&nbsp;frequency</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">frequency&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">float</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">freqget</span><span class="style_10">.</span><span class="style_11">get</span><span class="style_10">())&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;button</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">period&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1.0&nbsp;</span><span class="style_10">/&nbsp;</span><span class="style_11">frequency</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">frequency_now</span><span class="style_10">.</span><span class="style_14">set</span><span class="style_10">(</span><span class="style_11">frequency</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">ProcessQueue</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Process&nbsp;data&nbsp;queue,&nbsp;called&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_2">1</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;every&nbsp;20ms</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;while&nbsp;there&nbsp;is&nbsp;still&nbsp;data&nbsp;in&nbsp;the&nbsp;queue:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">while&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">data_queue</span><span class="style_10">.</span><span class="style_11">qsize</span><span class="style_10">():</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;try&nbsp;to&nbsp;take&nbsp;data&nbsp;out&nbsp;of&nbsp;the&nbsp;queue</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">try</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">queue_values&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">data_queue</span><span class="style_10">.</span><span class="style_11">get</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Append&nbsp;what&nbsp;we&nbsp;have&nbsp;taken&nbsp;from&nbsp;the&nbsp;queue&nbsp;to&nbsp;the&nbsp;numpy&nbsp;array&nbsp;(self.values)&nbsp;storing&nbsp;our&nbsp;sampled&nbsp;data&nbsp;values&nbsp;/&nbsp;times</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">np</span><span class="style_10">.</span><span class="style_11">append</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">,&nbsp;[</span><span class="style_11">queue_values</span><span class="style_10">],&nbsp;</span><span class="style_2">0</span><span class="style_10">)&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;Update&nbsp;the&nbsp;tkinter&nbsp;label&nbsp;displaying&nbsp;the&nbsp;ads1115&nbsp;output,&nbsp;we&nbsp;must&nbsp;do&nbsp;this&nbsp;here&nbsp;and&nbsp;not&nbsp;in&nbsp;the&nbsp;sampling&nbsp;function&nbsp;as&nbsp;we&nbsp;must</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;keep&nbsp;tkinter&nbsp;in&nbsp;the&nbsp;same&nbsp;thread&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample_value_string</span><span class="style_10">.</span><span class="style_14">set</span><span class="style_10">(</span><span class="style_11">queue_values</span><span class="style_10">[</span><span class="style_2">0</span><span class="style_10">])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">except&nbsp;</span><span class="style_11">Queue</span><span class="style_10">.</span><span class="style_11">Empty</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">pass</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">after</span><span class="style_10">(</span><span class="style_2">20</span><span class="style_10">,&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ProcessQueue</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">RealtimePloter</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Update&nbsp;plot&nbsp;function,&nbsp;called&nbsp;every</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;10&nbsp;seconds</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_2">1</span><span class="style_10">):</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">after</span><span class="style_10">(</span><span class="style_2">10000</span><span class="style_10">,</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">RealtimePloter</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;numSamples.get()&nbsp;is&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;slider&nbsp;in&nbsp;the&nbsp;GUI,&nbsp;if&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;samples</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;is&nbsp;less&nbsp;then&nbsp;this&nbsp;value&nbsp;just&nbsp;plot&nbsp;all&nbsp;the&nbsp;samples&nbsp;instead</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">NumberSamples</span><span class="style_10">=</span><span class="style_14">min</span><span class="style_10">(</span><span class="style_14">len</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">),</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">numSamples</span><span class="style_10">.</span><span class="style_11">get</span><span class="style_10">())&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">CurrentXAxis&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">[-</span><span class="style_11">NumberSamples</span><span class="style_10">:,</span><span class="style_2">1</span><span class="style_10">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Take&nbsp;the&nbsp;last&nbsp;NumberSamples&nbsp;elements&nbsp;from&nbsp;the</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">CurrentYAxis&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">values</span><span class="style_10">[-</span><span class="style_11">NumberSamples</span><span class="style_10">:,</span><span class="style_2">0</span><span class="style_10">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;self.values&nbsp;array&nbsp;and&nbsp;set&nbsp;as&nbsp;x&nbsp;and&nbsp;y&nbsp;axis</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">ax</span><span class="style_10">.</span><span class="style_11">axis</span><span class="style_10">([</span><span class="style_11">CurrentXAxis</span><span class="style_10">.</span><span class="style_14">min</span><span class="style_10">(),</span><span class="style_11">CurrentXAxis</span><span class="style_10">.</span><span class="style_14">max</span><span class="style_10">(),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Set&nbsp;axis&nbsp;limits,&nbsp;we&nbsp;set&nbsp;the&nbsp;y&nbsp;scale&nbsp;to&nbsp;the&nbsp;max&nbsp;and&nbsp;min&nbsp;sampled&nbsp;values&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_14">max</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_11">CurrentYAxis</span><span class="style_10">.</span><span class="style_14">min</span><span class="style_10">()-</span><span class="style_2">100</span><span class="style_10">),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;+/-&nbsp;100</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">CurrentYAxis</span><span class="style_10">.</span><span class="style_14">max</span><span class="style_10">()+</span><span class="style_2">100</span><span class="style_10">])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">line1</span><span class="style_10">[</span><span class="style_2">0</span><span class="style_10">].</span><span class="style_11">set_data</span><span class="style_10">(</span><span class="style_11">CurrentXAxis</span><span class="style_10">,</span><span class="style_11">CurrentYAxis</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Set&nbsp;the&nbsp;line&nbsp;dispalying&nbsp;the&nbsp;data</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">canvas</span><span class="style_10">.</span><span class="style_11">draw</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Update&nbsp;the&nbsp;plot</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">def&nbsp;</span><span class="style_9">SampleADC</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Function&nbsp;to&nbsp;sample&nbsp;adc,&nbsp;this&nbsp;runs</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">while&nbsp;</span><span class="style_10">(</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">sample</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;in&nbsp;a&nbsp;separate&nbsp;thread</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">if&nbsp;</span><span class="style_10">(</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()&nbsp;-&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">t_last&nbsp;</span><span class="style_10">&gt;&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">period</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Only&nbsp;sample&nbsp;if&nbsp;the&nbsp;current&nbsp;time&nbsp;is&nbsp;greater&nbsp;then&nbsp;the</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_1">#&nbsp;last&nbsp;sample&nbsp;time&nbsp;by&nbsp;an&nbsp;amount&nbsp;equal&nbsp;to&nbsp;the&nbsp;sampling&nbsp;period</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">LastSample&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">round</span><span class="style_10">(</span><span class="style_11">adc</span><span class="style_10">.</span><span class="style_11">getLastConversionResults</span><span class="style_10">(),</span><span class="style_2">1</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">samples&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">np</span><span class="style_10">.</span><span class="style_11">array</span><span class="style_10">([</span><span class="style_11">LastSample</span><span class="style_10">,&nbsp;</span><span class="style_14">round</span><span class="style_10">(</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()-</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">StartTime</span><span class="style_10">,</span><span class="style_2">2</span><span class="style_10">)])&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;1x2&nbsp;numpy&nbsp;array&nbsp;with&nbsp;the&nbsp;sampled&nbsp;value&nbsp;and&nbsp;sample&nbsp;time</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">data_queue</span><span class="style_10">.</span><span class="style_11">put</span><span class="style_10">(</span><span class="style_11">samples</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Add&nbsp;the&nbsp;array&nbsp;to&nbsp;self.data_queue</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">self</span><span class="style_10">.</span><span class="style_11">t_last&nbsp;</span><span class="style_10">+=&nbsp;</span><span class="style_11">self</span><span class="style_10">.</span><span class="style_11">period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Update&nbsp;the&nbsp;time&nbsp;of&nbsp;the&nbsp;last&nbsp;sample&nbsp;by&nbsp;the&nbsp;sampling&nbsp;period</span><br />
+<br />
+<span class="style_5">if&nbsp;</span><span class="style_14">__name__&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_3">"__main__"</span><span class="style_10">:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">ADS1115&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">0x01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Initialize&nbsp;adc</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">adc&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">ADS1x15</span><span class="style_10">(</span><span class="style_11">ic</span><span class="style_10">=</span><span class="style_11">ADS1115</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">app&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">realtimeplot</span><span class="style_10">(</span><span class="style_5">None</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">app</span><span class="style_10">.</span><span class="style_11">title</span><span class="style_10">(</span><span class="style_4">'Real&nbsp;Time&nbsp;Plot'</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">app</span><span class="style_10">.</span><span class="style_11">configure</span><span class="style_10">(</span><span class="style_11">bg&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">'light&nbsp;grey'</span><span class="style_10">)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">app</span><span class="style_10">.</span><span class="style_11">mainloop</span><span class="style_10">()</span><br />
+<br />
+
+</p>
+</body>
+</html>

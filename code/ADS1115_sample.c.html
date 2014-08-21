@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>C:\Users\David\Documents\CAMBRIDGE\YEAR3\Y3_Summerwork\CODE\(5)\ADS1115_sample.c</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+	<meta name="date" content="2013-09-09T22:08:00" />
+	<style type="text/css">
+	body
+	{
+		font-family: DejaVu Sans Mono, monospace;
+		font-size: 10pt;
+	}
+	.style_0
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_2
+	{
+		color: #d00000;
+		background-color: #ffffff;
+	}
+	.style_4
+	{
+		color: #007f00;
+		background-color: #ffffff;
+	}
+	.style_5
+	{
+		color: #00007f;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_6
+	{
+		color: #ff8000;
+		background-color: #ffffff;
+	}
+	.style_9
+	{
+		color: #007f7f;
+		background-color: #ffffff;
+	}
+	.style_10
+	{
+		color: #301010;
+		background-color: #ffffff;
+	}
+	.style_11
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_16
+	{
+		color: #991111;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+
+	</style>
+</head>
+
+<body>
+<p>
+<span class="style_9">#include&nbsp;</span><span class="style_6">&lt;stdio.h&gt;</span><br />
+<span class="style_9">#include&nbsp;</span><span class="style_6">&lt;fcntl.h&gt;</span><span class="style_11"> &nbsp; &nbsp; </span><span class="style_2">//&nbsp;open</span><br />
+<span class="style_9">#include&nbsp;</span><span class="style_6">&lt;inttypes.h&gt;</span><span class="style_11"> &nbsp;</span><span class="style_2">//&nbsp;uint8_t,&nbsp;etc</span><br />
+<span class="style_9">#include&nbsp;</span><span class="style_6">&lt;linux/i2c-dev.h&gt;&nbsp;</span><span class="style_2">//&nbsp;I2C&nbsp;bus&nbsp;definitions</span><br />
+<br />
+<span class="style_5">int&nbsp;</span><span class="style_11">main</span><span class="style_10">()&nbsp;{</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_5">int&nbsp;</span><span class="style_11">ADS_address&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">0x48</span><span class="style_10">;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Address&nbsp;of&nbsp;our&nbsp;device&nbsp;on&nbsp;the&nbsp;I2C&nbsp;bus</span><br />
+&nbsp;&nbsp;<span class="style_5">int&nbsp;</span><span class="style_11">I2CFile</span><span class="style_10">;</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_16">uint8_t&nbsp;</span><span class="style_11">writeBuf</span><span class="style_10">[</span><span class="style_4">3</span><span class="style_10">];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Buffer&nbsp;to&nbsp;store&nbsp;the&nbsp;3&nbsp;bytes&nbsp;that&nbsp;we&nbsp;write&nbsp;to&nbsp;the&nbsp;I2C&nbsp;device</span><br />
+&nbsp;&nbsp;<span class="style_16">uint8_t&nbsp;</span><span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">2</span><span class="style_10">];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;2&nbsp;byte&nbsp;buffer&nbsp;to&nbsp;store&nbsp;the&nbsp;data&nbsp;read&nbsp;from&nbsp;the&nbsp;I2C&nbsp;device</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_16">int16_t&nbsp;</span><span class="style_11">val</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Stores&nbsp;the&nbsp;16&nbsp;bit&nbsp;value&nbsp;of&nbsp;our&nbsp;ADC&nbsp;conversion</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_11">I2CFile&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">open</span><span class="style_10">(</span><span class="style_6">"/dev/i2c-1"</span><span class="style_10">,&nbsp;</span><span class="style_11">O_RDWR</span><span class="style_10">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Open&nbsp;the&nbsp;I2C&nbsp;device</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_11">ioctl</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">,&nbsp;</span><span class="style_11">I2C_SLAVE</span><span class="style_10">,&nbsp;</span><span class="style_11">ADS_address</span><span class="style_10">);&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Specify&nbsp;the&nbsp;address&nbsp;of&nbsp;the&nbsp;I2C&nbsp;Slave&nbsp;to&nbsp;communicate&nbsp;with</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_2">//&nbsp;These&nbsp;three&nbsp;bytes&nbsp;are&nbsp;written&nbsp;to&nbsp;the&nbsp;ADS1115&nbsp;to&nbsp;set&nbsp;the&nbsp;config&nbsp;register&nbsp;and&nbsp;start&nbsp;a&nbsp;conversion&nbsp;</span><br />
+&nbsp;&nbsp;<span class="style_11">writeBuf</span><span class="style_10">[</span><span class="style_4">0</span><span class="style_10">]&nbsp;=&nbsp;</span><span class="style_4">1</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;This&nbsp;sets&nbsp;the&nbsp;pointer&nbsp;register&nbsp;so&nbsp;that&nbsp;the&nbsp;following&nbsp;two&nbsp;bytes&nbsp;write&nbsp;to&nbsp;the&nbsp;config&nbsp;register</span><br />
+&nbsp;&nbsp;<span class="style_11">writeBuf</span><span class="style_10">[</span><span class="style_4">1</span><span class="style_10">]&nbsp;=&nbsp;</span><span class="style_4">0xC3</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;This&nbsp;sets&nbsp;the&nbsp;8&nbsp;MSBs&nbsp;of&nbsp;the&nbsp;config&nbsp;register&nbsp;(bits&nbsp;15-8)&nbsp;to&nbsp;11000011</span><br />
+&nbsp;&nbsp;<span class="style_11">writeBuf</span><span class="style_10">[</span><span class="style_4">2</span><span class="style_10">]&nbsp;=&nbsp;</span><span class="style_4">0x03</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;This&nbsp;sets&nbsp;the&nbsp;8&nbsp;LSBs&nbsp;of&nbsp;the&nbsp;config&nbsp;register&nbsp;(bits&nbsp;7-0)&nbsp;to&nbsp;00000011</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_2">//&nbsp;Initialize&nbsp;the&nbsp;buffer&nbsp;used&nbsp;to&nbsp;read&nbsp;data&nbsp;from&nbsp;the&nbsp;ADS1115&nbsp;to&nbsp;0</span><br />
+&nbsp;&nbsp;<span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">0</span><span class="style_10">]=&nbsp;</span><span class="style_4">0</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;<span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">1</span><span class="style_10">]=&nbsp;</span><span class="style_4">0</span><span class="style_10">;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_2">//&nbsp;Write&nbsp;writeBuf&nbsp;to&nbsp;the&nbsp;ADS1115,&nbsp;the&nbsp;3&nbsp;specifies&nbsp;the&nbsp;number&nbsp;of&nbsp;bytes&nbsp;we&nbsp;are&nbsp;writing,</span><br />
+&nbsp;&nbsp;<span class="style_2">//&nbsp;this&nbsp;begins&nbsp;a&nbsp;single&nbsp;conversion</span><br />
+&nbsp;&nbsp;<span class="style_11">write</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">,&nbsp;</span><span class="style_11">writeBuf</span><span class="style_10">,&nbsp;</span><span class="style_4">3</span><span class="style_10">);&nbsp;&nbsp;</span><br />
+<br />
+&nbsp;&nbsp;<span class="style_2">//&nbsp;Wait&nbsp;for&nbsp;the&nbsp;conversion&nbsp;to&nbsp;complete,&nbsp;this&nbsp;requires&nbsp;bit&nbsp;15&nbsp;to&nbsp;change&nbsp;from&nbsp;0-&gt;1</span><br />
+&nbsp;&nbsp;<span class="style_5">while&nbsp;</span><span class="style_10">((</span><span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">0</span><span class="style_10">]&nbsp;&amp;&nbsp;</span><span class="style_4">0x80</span><span class="style_10">)&nbsp;==&nbsp;</span><span class="style_4">0</span><span class="style_10">)&nbsp;&nbsp;</span><span class="style_2">//&nbsp;readBuf[0]&nbsp;contains&nbsp;8&nbsp;MSBs&nbsp;of&nbsp;config&nbsp;register,&nbsp;AND&nbsp;with&nbsp;10000000&nbsp;to&nbsp;select&nbsp;bit&nbsp;15</span><br />
+&nbsp;&nbsp;<span class="style_10">{</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">read</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">,&nbsp;</span><span class="style_11">readBuf</span><span class="style_10">,&nbsp;</span><span class="style_4">2</span><span class="style_10">);&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Read&nbsp;the&nbsp;config&nbsp;register&nbsp;into&nbsp;readBuf</span><br />
+&nbsp;&nbsp;<span class="style_10">}</span><br />
+<br />
+&nbsp;&nbsp;<span class="style_11">writeBuf</span><span class="style_10">[</span><span class="style_4">0</span><span class="style_10">]&nbsp;=&nbsp;</span><span class="style_4">0</span><span class="style_10">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Set&nbsp;pointer&nbsp;register&nbsp;to&nbsp;0&nbsp;to&nbsp;read&nbsp;from&nbsp;the&nbsp;conversion&nbsp;register</span><br />
+&nbsp;&nbsp;<span class="style_11">write</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">,&nbsp;</span><span class="style_11">writeBuf</span><span class="style_10">,&nbsp;</span><span class="style_4">1</span><span class="style_10">);</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_11">read</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">,&nbsp;</span><span class="style_11">readBuf</span><span class="style_10">,&nbsp;</span><span class="style_4">2</span><span class="style_10">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Read&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;conversion&nbsp;register&nbsp;into&nbsp;readBuf</span><br />
+<br />
+&nbsp;&nbsp;<span class="style_11">val&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">0</span><span class="style_10">]&nbsp;&lt;&lt;&nbsp;</span><span class="style_4">8&nbsp;</span><span class="style_10">|&nbsp;</span><span class="style_11">readBuf</span><span class="style_10">[</span><span class="style_4">1</span><span class="style_10">];&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Combine&nbsp;the&nbsp;two&nbsp;bytes&nbsp;of&nbsp;readBuf&nbsp;into&nbsp;a&nbsp;single&nbsp;16&nbsp;bit&nbsp;result&nbsp;</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_11">printf</span><span class="style_10">(</span><span class="style_6">"Voltage&nbsp;Reading&nbsp;%f&nbsp;(V)&nbsp;\n"</span><span class="style_10">,&nbsp;(</span><span class="style_5">float</span><span class="style_10">)</span><span class="style_11">val</span><span class="style_10">*</span><span class="style_4">4.096</span><span class="style_10">/</span><span class="style_4">32767.0</span><span class="style_10">);&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_2">//&nbsp;Print&nbsp;the&nbsp;result&nbsp;to&nbsp;terminal,&nbsp;first&nbsp;convert&nbsp;from&nbsp;binary&nbsp;value&nbsp;to&nbsp;mV</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_11">close</span><span class="style_10">(</span><span class="style_11">I2CFile</span><span class="style_10">);</span><br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<span class="style_5">return&nbsp;</span><span class="style_4">0</span><span class="style_10">;</span><br />
+<br />
+<span class="style_10">}</span><br />
+<br />
+<br />
+
+</p>
+</body>
+</html>

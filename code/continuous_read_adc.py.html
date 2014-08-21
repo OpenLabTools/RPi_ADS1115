@@ -1,0 +1,1243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>C:\Users\David\Documents\CAMBRIDGE\YEAR3\Y3_Summerwork\CODE\(8)\continuous_read_adc.py</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+	<meta name="date" content="2013-09-09T23:24:11" />
+	<style type="text/css">
+	body
+	{
+		font-family: DejaVu Sans Mono, monospace;
+		font-size: 10pt;
+	}
+	.style_0
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_1
+	{
+		color: #d00000;
+		background-color: #ffffff;
+	}
+	.style_2
+	{
+		color: #007f00;
+		background-color: #ffffff;
+	}
+	.style_3
+	{
+		color: #ff8000;
+		background-color: #ffffff;
+	}
+	.style_4
+	{
+		color: #ff8000;
+		background-color: #ffffff;
+	}
+	.style_5
+	{
+		color: #00007f;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_9
+	{
+		color: #000080;
+		background-color: #ffffff;
+	}
+	.style_10
+	{
+		color: #301010;
+		background-color: #ffffff;
+	}
+	.style_11
+	{
+		color: #000000;
+		background-color: #ffffff;
+	}
+	.style_14
+	{
+		color: #991111;
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.style_32
+	{
+		color: #000000;
+		background-color: #070b72;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_33
+	{
+		color: #000086;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_35
+	{
+		color: #000000;
+		background-color: #1508c2;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_36
+	{
+		color: #000000;
+		background-color: #000006;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_37
+	{
+		color: #75f86210;
+		background-color: #75ff0230;
+		font-style: italic;
+	}
+	.style_38
+	{
+		color: #75f86b00;
+		background-color: #806cc1e0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_39
+	{
+		color: #000001;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_40
+	{
+		color: #75fea61e;
+		background-color: #f5bc7144;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_41
+	{
+		color: #1508c2;
+		background-color: #000006;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_43
+	{
+		color: #000001;
+		background-color: #6c371904;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_45
+	{
+		color: #000000;
+		background-color: #28dd68;
+		font-weight: bold;
+	}
+	.style_46
+	{
+		color: #000000;
+		background-color: #28dc48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_48
+	{
+		color: #000000;
+		background-color: #6c371904;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_49
+	{
+		color: #75f86b00;
+		background-color: #28dcc0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_50
+	{
+		color: #000000;
+		background-color: #1508c2;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_51
+	{
+		color: #000006;
+		background-color: #0a0004;
+		font-style: italic;
+	}
+	.style_52
+	{
+		color: #28dccc;
+		background-color: #75d3319b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_53
+	{
+		color: #75cd3ad3;
+		background-color: #806cc677;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_55
+	{
+		color: #28dd20;
+		background-color: #75d3319b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_56
+	{
+		color: #75f88102;
+		background-color: #0a0004;
+		font-weight: bold;
+	}
+	.style_57
+	{
+		color: #75f880a9;
+		background-color: #0a0004;
+		font-weight: bold;
+	}
+	.style_58
+	{
+		color: #806cc77c;
+		background-color: #1b0c48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_59
+	{
+		color: #75f86df3;
+		background-color: #28dd70;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_60
+	{
+		color: #75f880bb;
+		background-color: #77a9f8ea;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_61
+	{
+		color: #000000;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_62
+	{
+		color: #000001;
+		background-color: #4bee8a8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_63
+	{
+		color: #00009e;
+		background-color: #00009d;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_64
+	{
+		color: #000000;
+		background-color: #52c2918;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_66
+	{
+		color: #000780;
+		background-color: #000002;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_83
+	{
+		color: #000190;
+		background-color: #1000000;
+		font-style: italic;
+	}
+	.style_86
+	{
+		color: #000000;
+		background-color: #000000;
+	}
+	.style_87
+	{
+		color: #000000;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_88
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_89
+	{
+		color: #70270278;
+		background-color: #28df8c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_90
+	{
+		color: #2a15a9c;
+		background-color: #28dfb4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_91
+	{
+		color: #2a15a68;
+		background-color: #2a15a00;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_92
+	{
+		color: #2a15a00;
+		background-color: #2a15a24;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_93
+	{
+		color: #28e158;
+		background-color: #28e1b4;
+		font-style: italic;
+	}
+	.style_94
+	{
+		color: #0000a0;
+		background-color: #000020;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_97
+	{
+		color: #000000;
+		background-color: #000000;
+	}
+	.style_98
+	{
+		color: #00001b;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_99
+	{
+		color: #000002;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_100
+	{
+		color: #e8011740;
+		background-color: #41809c0;
+		font-style: italic;
+	}
+	.style_101
+	{
+		color: #e8011740;
+		background-color: #28e088;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_102
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_103
+	{
+		color: #e8011740;
+		background-color: #00003b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_104
+	{
+		color: #e8011740;
+		background-color: #2a15a00;
+		font-weight: bold;
+	}
+	.style_105
+	{
+		color: #020001;
+		background-color: #0000a0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_106
+	{
+		color: #000003;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_107
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_109
+	{
+		color: #000001;
+		background-color: #00001b;
+	}
+	.style_110
+	{
+		color: #000011;
+		background-color: #00000d;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_111
+	{
+		color: #5c1021bc;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_113
+	{
+		color: #000000;
+		background-color: #000009;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_115
+	{
+		color: #000000;
+		background-color: #e8011740;
+		font-style: italic;
+	}
+	.style_116
+	{
+		color: #070b72;
+		background-color: #000086;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_117
+	{
+		color: #000000;
+		background-color: #1b0c48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_118
+	{
+		color: #000086;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_120
+	{
+		color: #000000;
+		background-color: #75f86a62;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_121
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_122
+	{
+		color: #75f86210;
+		background-color: #75ff0230;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_123
+	{
+		color: #75f86b00;
+		background-color: #806cf81c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_124
+	{
+		color: #000001;
+		background-color: #4bee8a8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_125
+	{
+		color: #070b72;
+		background-color: #000006;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_126
+	{
+		color: #000000;
+		background-color: #000086;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_128
+	{
+		color: #000000;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_130
+	{
+		color: #000000;
+		background-color: #28e2d8;
+		font-weight: bold;
+	}
+	.style_131
+	{
+		color: #000000;
+		background-color: #28e2ec;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_133
+	{
+		color: #000000;
+		background-color: #6c371904;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_134
+	{
+		color: #00009e;
+		background-color: #28e364;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_135
+	{
+		color: #000000;
+		background-color: #070b72;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_136
+	{
+		color: #11bb3b0;
+		background-color: #0a0004;
+		font-style: italic;
+	}
+	.style_137
+	{
+		color: #28e370;
+		background-color: #75d3319b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_140
+	{
+		color: #28e3c4;
+		background-color: #75d3319b;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_141
+	{
+		color: #75f88102;
+		background-color: #0a0004;
+		font-weight: bold;
+	}
+	.style_142
+	{
+		color: #75f880a9;
+		background-color: #0a0004;
+		font-weight: bold;
+	}
+	.style_143
+	{
+		color: #806cf998;
+		background-color: #070b72;
+		font-weight: bold;
+	}
+	.style_144
+	{
+		color: #75f86df3;
+		background-color: #28e414;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_145
+	{
+		color: #75f880bb;
+		background-color: #77a9f8ea;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_147
+	{
+		color: #08ebf8;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_148
+	{
+		color: #1b0c48;
+		background-color: #000000;
+	}
+	.style_150
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_151
+	{
+		color: #000001;
+		background-color: #28e46c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_152
+	{
+		color: #000000;
+		background-color: #75fded34;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_153
+	{
+		color: #1b0c48;
+		background-color: #000111;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_154
+	{
+		color: #dcbaabcd;
+		background-color: #000001;
+		font-style: italic;
+	}
+	.style_155
+	{
+		color: #000011;
+		background-color: #1b0c48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_156
+	{
+		color: #75faf962;
+		background-color: #806cff58;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_158
+	{
+		color: #000000;
+		background-color: #28e504;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_159
+	{
+		color: #000011;
+		background-color: #1b0c48;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_160
+	{
+		color: #806cff7c;
+		background-color: #75f87136;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_161
+	{
+		color: #1b0c48;
+		background-color: #28e500;
+		font-style: italic;
+	}
+	.style_163
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_164
+	{
+		color: #000082;
+		background-color: #000000;
+	}
+	.style_169
+	{
+		color: #2a17cb8;
+		background-color: #29f00c4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_170
+	{
+		color: #000001;
+		background-color: #2a177e0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_171
+	{
+		color: #77ab38aa;
+		background-color: #768acb06;
+		font-style: italic;
+	}
+	.style_172
+	{
+		color: #75f8702c;
+		background-color: #28e6e0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_173
+	{
+		color: #75f86b00;
+		background-color: #29f00c4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_176
+	{
+		color: #000003;
+		background-color: #000001;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_177
+	{
+		color: #6000006;
+		background-color: #000080;
+		font-style: italic;
+	}
+	.style_178
+	{
+		color: #000001;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_179
+	{
+		color: #75ff0230;
+		background-color: #75f86b00;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_180
+	{
+		color: #000100;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_181
+	{
+		color: #1010001;
+		background-color: #28e5e0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_182
+	{
+		color: #108e5b6;
+		background-color: #fffffffe;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_183
+	{
+		color: #000001;
+		background-color: #75f8717a;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_184
+	{
+		color: #75f8692a;
+		background-color: #75f87290;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_185
+	{
+		color: #1b0c48;
+		background-color: #00a91a;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_186
+	{
+		color: #1b0c48;
+		background-color: #00a91a;
+		font-weight: bold;
+	}
+	.style_187
+	{
+		color: #28e730;
+		background-color: #702376a5;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_188
+	{
+		color: #28e740;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_190
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_191
+	{
+		color: #000082;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_192
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_193
+	{
+		color: #000000;
+		background-color: #75202e09;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_194
+	{
+		color: #806cf248;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_195
+	{
+		color: #000001;
+		background-color: #000000;
+		font-style: italic;
+	}
+	.style_196
+	{
+		color: #ffffffff;
+		background-color: #75f86ce9;
+		font-weight: bold;
+	}
+	.style_197
+	{
+		color: #000000;
+		background-color: #000000;
+		font-weight: bold;
+	}
+	.style_198
+	{
+		color: #75fea61e;
+		background-color: #f5bc7714;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_199
+	{
+		color: #000000;
+		background-color: #8f0000;
+		font-weight: bold;
+	}
+	.style_200
+	{
+		color: #000000;
+		background-color: #930058;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_201
+	{
+		color: #8f0000;
+		background-color: #000004;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_202
+	{
+		color: #8f0138;
+		background-color: #77ab38aa;
+		font-weight: bold;
+	}
+	.style_203
+	{
+		color: #92fe80;
+		background-color: #75f86df3;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_204
+	{
+		color: #75f89a49;
+		background-color: #28e88c;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_205
+	{
+		color: #8f0000;
+		background-color: #8f0150;
+	}
+	.style_206
+	{
+		color: #2000002;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_207
+	{
+		color: #28e8bc;
+		background-color: #000003;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_208
+	{
+		color: #000000;
+		background-color: #ef000fe0;
+		font-weight: bold;
+	}
+	.style_210
+	{
+		color: #8f0150;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_212
+	{
+		color: #000210;
+		background-color: #1010000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_213
+	{
+		color: #77af71f5;
+		background-color: #108e5b6;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_214
+	{
+		color: #000000;
+		background-color: #92fe80;
+		font-weight: bold;
+	}
+	.style_216
+	{
+		color: #92fe80;
+		background-color: #000007;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_217
+	{
+		color: #000014;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_218
+	{
+		color: #765acf1f;
+		background-color: #000008;
+	}
+	.style_219
+	{
+		color: #000480;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_220
+	{
+		color: #000000;
+		background-color: #007f02;
+		font-style: italic;
+	}
+	.style_223
+	{
+		color: #92ff0c;
+		background-color: #f11244;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_224
+	{
+		color: #000024;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_226
+	{
+		color: #f10ecc;
+		background-color: #f10ef4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_227
+	{
+		color: #000000;
+		background-color: #75fdfa94;
+		font-style: italic;
+	}
+	.style_228
+	{
+		color: #6a07d0;
+		background-color: #6aab01;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_229
+	{
+		color: #6900f14f;
+		background-color: #000018;
+		font-style: italic;
+	}
+	.style_230
+	{
+		color: #000001;
+		background-color: #000000;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_231
+	{
+		color: #28eac8;
+		background-color: #765aa490;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_232
+	{
+		color: #6900f143;
+		background-color: #28eaf2;
+		font-weight: bold;
+	}
+	.style_233
+	{
+		color: #28eba8;
+		background-color: #7659a53a;
+		font-style: italic;
+	}
+	.style_234
+	{
+		color: #7659a5bd;
+		background-color: #69004a51;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_235
+	{
+		color: #000001;
+		background-color: #28eb98;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_236
+	{
+		color: #555f0043;
+		background-color: #69000053;
+		font-weight: bold;
+	}
+	.style_237
+	{
+		color: #fffffffe;
+		background-color: #28ffc4;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_238
+	{
+		color: #2f534547;
+		background-color: #6e616567;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_239
+	{
+		color: #69005efe;
+		background-color: #6900e0c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_240
+	{
+		color: #59b8f3;
+		background-color: #00007f;
+		font-style: italic;
+	}
+	.style_245
+	{
+		color: #6a0000;
+		background-color: #80d368;
+		font-style: italic;
+	}
+	.style_246
+	{
+		color: #00094f;
+		background-color: #28ebdc;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_247
+	{
+		color: #000001;
+		background-color: #80d360;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_249
+	{
+		color: #6a0000;
+		background-color: #80d2c8;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_250
+	{
+		color: #000950;
+		background-color: #7e0ab0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_251
+	{
+		color: #000001;
+		background-color: #80d2c0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_252
+	{
+		color: #000000;
+		background-color: #7e0ab0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_254
+	{
+		color: #28ee0c;
+		background-color: #7e0ab0;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.style_255
+	{
+		color: #80d368;
+		background-color: #28ec50;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	</style>
+</head>
+
+<body>
+<p>
+<span class="style_5">from&nbsp;</span><span class="style_11">Adafruit_ADS1x15&nbsp;</span><span class="style_5">import&nbsp;</span><span class="style_11">ADS1x15</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">time</span><br />
+<span class="style_5">import&nbsp;</span><span class="style_11">numpy&nbsp;</span><span class="style_5">as&nbsp;</span><span class="style_11">np</span><br />
+<br />
+<span class="style_11">pga&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">6144&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Set&nbsp;full-scale&nbsp;range&nbsp;of&nbsp;programable&nbsp;gain&nbsp;amplifier&nbsp;(page&nbsp;13&nbsp;of&nbsp;data&nbsp;sheet),&nbsp;change&nbsp;depending&nbsp;on&nbsp;the&nbsp;input&nbsp;voltage&nbsp;range</span><br />
+<span class="style_11">ADS1115&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">0x01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Specify&nbsp;that&nbsp;the&nbsp;device&nbsp;being&nbsp;used&nbsp;is&nbsp;the&nbsp;ADS1115,&nbsp;for&nbsp;the&nbsp;ADS1015&nbsp;used&nbsp;0x00</span><br />
+<span class="style_11">adc&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">ADS1x15</span><span class="style_10">(</span><span class="style_11">ic</span><span class="style_10">=</span><span class="style_11">ADS1115</span><span class="style_10">)&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;instance&nbsp;of&nbsp;the&nbsp;class&nbsp;ADS1x15&nbsp;called&nbsp;adc</span><br />
+<br />
+<span class="style_1">#&nbsp;Function&nbsp;to&nbsp;print&nbsp;sampled&nbsp;values&nbsp;to&nbsp;the&nbsp;terminal</span><br />
+<span class="style_5">def&nbsp;</span><span class="style_9">logdata</span><span class="style_10">():</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">print&nbsp;</span><span class="style_3">"sps&nbsp;value&nbsp;should&nbsp;be&nbsp;one&nbsp;of:&nbsp;8,&nbsp;16,&nbsp;32,&nbsp;64,&nbsp;128,&nbsp;250,&nbsp;475,&nbsp;860,&nbsp;otherwise&nbsp;the&nbsp;value&nbsp;will&nbsp;default&nbsp;to&nbsp;250"</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">frequency&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">input</span><span class="style_10">(</span><span class="style_3">"Input&nbsp;sampling&nbsp;frequency&nbsp;(Hz):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Get&nbsp;sampling&nbsp;frequency&nbsp;from&nbsp;user</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sps&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">input</span><span class="style_10">(</span><span class="style_3">"Input&nbsp;sps&nbsp;(Hz)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Get&nbsp;ads1115&nbsp;sps&nbsp;value&nbsp;from&nbsp;the&nbsp;user</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">time1&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">input</span><span class="style_10">(</span><span class="style_3">"Input&nbsp;sample&nbsp;time&nbsp;(seconds):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Get&nbsp;how&nbsp;long&nbsp;to&nbsp;sample&nbsp;for&nbsp;from&nbsp;the&nbsp;user</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">period&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_2">1.0&nbsp;</span><span class="style_10">/&nbsp;</span><span class="style_11">frequency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Calculate&nbsp;sampling&nbsp;period</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">datapoints&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">int</span><span class="style_10">(</span><span class="style_11">time1</span><span class="style_10">*</span><span class="style_11">frequency</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Datapoints&nbsp;is&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;samples&nbsp;to&nbsp;take,&nbsp;which&nbsp;must&nbsp;be&nbsp;an&nbsp;integer</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataarray</span><span class="style_10">=</span><span class="style_11">np</span><span class="style_10">.</span><span class="style_11">zeros</span><span class="style_10">([</span><span class="style_11">datapoints</span><span class="style_10">,</span><span class="style_2">2</span><span class="style_10">])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;numpy&nbsp;array&nbsp;to&nbsp;store&nbsp;value&nbsp;and&nbsp;time&nbsp;at&nbsp;which&nbsp;samples&nbsp;are&nbsp;taken</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">adc</span><span class="style_10">.</span><span class="style_11">startContinuousConversion</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,&nbsp;</span><span class="style_11">pga</span><span class="style_10">,&nbsp;</span><span class="style_11">sps</span><span class="style_10">)&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Begin&nbsp;continuous&nbsp;conversion&nbsp;on&nbsp;input&nbsp;A0</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">print&nbsp;</span><span class="style_3">"Press&nbsp;ENTER&nbsp;to&nbsp;start&nbsp;sampling"&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_14">raw_input</span><span class="style_10">()</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">startTime</span><span class="style_10">=</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Time&nbsp;of&nbsp;first&nbsp;sample</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">t1</span><span class="style_10">=</span><span class="style_11">startTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;T1&nbsp;is&nbsp;last&nbsp;sample&nbsp;time</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">t2</span><span class="style_10">=</span><span class="style_11">t1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;T2&nbsp;is&nbsp;current&nbsp;time</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">for&nbsp;</span><span class="style_11">x&nbsp;</span><span class="style_5">in&nbsp;</span><span class="style_14">range&nbsp;</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,</span><span class="style_11">datapoints</span><span class="style_10">)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Loop&nbsp;in&nbsp;which&nbsp;data&nbsp;is&nbsp;sampled</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataarray</span><span class="style_10">[</span><span class="style_11">x</span><span class="style_10">,</span><span class="style_2">0</span><span class="style_10">]=&nbsp;</span><span class="style_11">adc</span><span class="style_10">.</span><span class="style_11">getLastConversionResults</span><span class="style_10">()&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Get&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;last&nbsp;conversion&nbsp;from&nbsp;the&nbsp;ADS1115&nbsp;and&nbsp;store&nbsp;in&nbsp;numpy&nbsp;array</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">dataarray</span><span class="style_10">[</span><span class="style_11">x</span><span class="style_10">,</span><span class="style_2">1</span><span class="style_10">]&nbsp;=&nbsp;</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()-</span><span class="style_11">startTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Store&nbsp;the&nbsp;sample&nbsp;time&nbsp;in&nbsp;the&nbsp;numpy&nbsp;array</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">while&nbsp;</span><span class="style_10">(</span><span class="style_11">t2</span><span class="style_10">-</span><span class="style_11">t1&nbsp;</span><span class="style_10">&lt;&nbsp;</span><span class="style_11">period</span><span class="style_10">)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Check&nbsp;if&nbsp;t2-t1&nbsp;is&nbsp;less&nbsp;then&nbsp;sample&nbsp;period,&nbsp;if&nbsp;it&nbsp;is&nbsp;then&nbsp;update&nbsp;t2</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">t2</span><span class="style_10">=</span><span class="style_11">time</span><span class="style_10">.</span><span class="style_11">time</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;and&nbsp;check&nbsp;again&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">t1</span><span class="style_10">+=</span><span class="style_11">period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Update&nbsp;last&nbsp;sample&nbsp;time&nbsp;by&nbsp;the&nbsp;sampling&nbsp;period</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_5">return&nbsp;</span><span class="style_10">(</span><span class="style_11">dataarray</span><span class="style_10">)</span><br />
+<br />
+<span class="style_11">dataSamples&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">logdata</span><span class="style_10">()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Call&nbsp;function&nbsp;to&nbsp;log&nbsp;data</span><br />
+<br />
+<span class="style_11">printchoice</span><span class="style_10">=</span><span class="style_14">raw_input</span><span class="style_10">(</span><span class="style_3">"Do&nbsp;you&nbsp;want&nbsp;to&nbsp;save&nbsp;data&nbsp;to&nbsp;CSV&nbsp;(Y/N):&nbsp;"</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Ask&nbsp;user&nbsp;if&nbsp;they&nbsp;want&nbsp;to&nbsp;save&nbsp;sampled&nbsp;values</span><br />
+<br />
+<span class="style_5">if&nbsp;</span><span class="style_10">(</span><span class="style_11">printchoice&nbsp;</span><span class="style_10">==&nbsp;</span><span class="style_3">"Y"&nbsp;</span><span class="style_5">or&nbsp;</span><span class="style_3">"y"</span><span class="style_10">)&nbsp;:</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">np</span><span class="style_10">.</span><span class="style_11">savetxt</span><span class="style_10">(</span><span class="style_4">'dataSamples.txt'</span><span class="style_10">,</span><span class="style_11">dataSamples</span><span class="style_10">,&nbsp;</span><span class="style_11">fmt</span><span class="style_10">=</span><span class="style_4">'%.3f'</span><span class="style_10">,&nbsp;</span><span class="style_11">delimiter&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_4">','</span><span class="style_10">)&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Save&nbsp;dataSamples&nbsp;to&nbsp;the&nbsp;file&nbsp;'dataSamples.txt'&nbsp;using&nbsp;comma&nbsp;separated&nbsp;values</span><br />
+<br />
+<br />
+<span class="style_1">#&nbsp;Calculate&nbsp;time&nbsp;between&nbsp;succesive&nbsp;samples,&nbsp;store&nbsp;in&nbsp;sampleIntervals&nbsp;array</span><br />
+<br />
+<span class="style_11">number_samples&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_14">len</span><span class="style_10">(</span><span class="style_11">dataarray</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Number&nbsp;of&nbsp;samples&nbsp;taken</span><br />
+<span class="style_11">sampleIntervals&nbsp;</span><span class="style_10">=&nbsp;</span><span class="style_11">np</span><span class="style_10">.</span><span class="style_11">zeros</span><span class="style_10">(</span><span class="style_11">number_samples</span><span class="style_10">-</span><span class="style_2">1</span><span class="style_10">)&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Create&nbsp;numpy&nbsp;array&nbsp;of&nbsp;length&nbsp;equal&nbsp;to&nbsp;the&nbsp;number&nbsp;of&nbsp;samples&nbsp;taken</span><br />
+<br />
+<span class="style_5">for&nbsp;</span><span class="style_11">i&nbsp;</span><span class="style_5">in&nbsp;</span><span class="style_14">range</span><span class="style_10">(</span><span class="style_2">0</span><span class="style_10">,&nbsp;</span><span class="style_11">number_samples</span><span class="style_10">-</span><span class="style_2">1</span><span class="style_10">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style_1">#&nbsp;Store&nbsp;time&nbsp;difference&nbsp;between&nbsp;sample&nbsp;i&nbsp;and&nbsp;sample&nbsp;i+1&nbsp;in&nbsp;each&nbsp;element&nbsp;of&nbsp;the&nbsp;sampleIntervals&nbsp;array</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="style_11">sampleIntervals</span><span class="style_10">[</span><span class="style_11">i</span><span class="style_10">]=</span><span class="style_11">dataarray</span><span class="style_10">[</span><span class="style_11">i</span><span class="style_10">+</span><span class="style_2">1</span><span class="style_10">,</span><span class="style_2">1</span><span class="style_10">]-</span><span class="style_11">dataarray</span><span class="style_10">[</span><span class="style_11">i</span><span class="style_10">,</span><span class="style_2">1</span><span class="style_10">]</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+<br />
+
+</p>
+</body>
+</html>
